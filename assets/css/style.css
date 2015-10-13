@@ -1,0 +1,69 @@
+* {
+    font-family: sans-serif, Helvetica, Arial;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+.row {
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.col-3 {
+    width: 35%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.form-elem {
+    margin: 10px;
+}
+
+.form-validaion {
+    color: red;
+    font-size: 12px;
+}
+
+.dsc-main__wrapper {
+    background: #f2f2f2;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.btn-lg {
+    width: 100%;
+    background: #24A9DF;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: background 0.5s ease-out;
+    outline: none;
+    color: white;
+}
+
+.btn-lg:hover {
+    background: #1681AC;
+}
