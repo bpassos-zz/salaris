@@ -6,11 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<div class="dsc-main__header">
+    <div class="dsc-main__header-logo">
+        <img src="img/salaris_logo.jpg" alt="Salaris logo">
+        <h1>Dutch salary calculator</h1>
+    </div>
+</div>
 <div class="dsc-main__wrapper">
     <form id="dsc-form" action="" class="dsc-form">
         <div class="row">
             <label for="gross_salary">Gross yearly salary</label><br>
             <input id="gross_salary" type="text" placeholder="What is your gross yearly salary?">
+            
+            <!-- This extra hidden field is to prevent page reload on enter-->
+            <input id="hidden_field" type="text" style="display:none;">
+            
             <div id="form-validaion-js" class="form-validaion"></div>
         </div>
         
