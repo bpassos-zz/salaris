@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Dutch Salary Calculation</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<div class="dsc-main__header">
-    <div class="dsc-main__header-logo">
-        <img src="img/salaris_logo.jpg" alt="Salaris logo">
+  </head>
+  <body>
+    <div class="dsc-main__header">
+      <div class="dsc-main__header-logo">
+        <img src="img/salaris.jpg" alt="Salaris logo">
         <h1>Dutch salary calculator</h1>
+      </div>
     </div>
-</div>
-<div class="dsc-main__wrapper">
-    <form id="dsc-form" action="" class="dsc-form">
+    <div class="dsc-main__wrapper">
+      <form id="dsc-form" action="" class="dsc-form">
         <div class="row">
-            <label for="gross_salary">Gross yearly salary</label><br>
-            <input id="gross_salary" type="text" placeholder="What is your gross yearly salary?">
-            
-            <!-- This extra hidden field is to prevent page reload on enter-->
-            <input id="hidden_field" type="text" style="display:none;">
-            
-            <div id="form-validaion-js" class="form-validaion"></div>
-        </div>
-        
-        <div class="row">
-            <label for="thirty_percent">Are you entitled to the 30% rulling?</label><br>
-            <div class="form-elem">
-                <input id="thirty_percent_yes" type="radio" name="thirty_percent" value="yes" checked="checked">
-                <label for="thirty_percent_yes">Yes</label>
-                <input id="thirty_percent_no" type="radio" name="thirty_percent" value="no">
-                <label for="thirty_percent_no">No</label>
-            </div>
-        </div>
-        <div class="row">
-            <div id="results"></div>
-        </div>
-        
-    </form>
-<button id="submit" class="btn-lg">CALCULATE SALARY</button>
+          <label for="gross_salary">Gross yearly salary</label><br>
+          <input id="gross_salary" type="text" placeholder="What is your gross yearly salary?">
 
-</div>
-<script src="scripts/main.js"></script>
-</body>
+          <!-- This extra hidden field is to prevent page reload on enter-->
+          <input id="hidden_field" type="text" style="display:none;">
+
+          <div id="form-validaion-js" class="form-validaion"></div>
+        </div>
+
+        <div class="row">
+          <label for="thirty_percent">Are you entitled to the 30% rulling?</label><br>
+          <div class="form-elem">
+            <input id="thirty_percent_yes" type="radio" name="thirty_percent" value="yes" checked="checked">
+            <label for="thirty_percent_yes">Yes</label>
+            <input id="thirty_percent_no" type="radio" name="thirty_percent" value="no">
+            <label for="thirty_percent_no">No</label>
+          </div>
+        </div>
+        <div class="row">
+          <div id="results"></div>
+        </div>
+
+      </form>
+      <button id="submit" class="btn-lg">CALCULATE SALARY</button>
+
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
