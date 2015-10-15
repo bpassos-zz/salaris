@@ -1,0 +1,39 @@
+{
+  "name": "salaris",
+  "version": "0.0.1",
+  "description": "Dutch salary calculator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "watchify scripts/index.js -o index.js -dv",
+    "build": "browserify scripts/index.js | uglifyjs -mc > index.js"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify"
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpassos/salaris.git"
+  },
+  "keywords": [
+    "Dutch",
+    "Salary",
+    "Calculator"
+  ],
+  "author": "Bruno Passos <brunopassos.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bpassos/salaris/issues"
+  },
+  "homepage": "https://github.com/bpassos/salaris#readme",
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "connect": "^3.4.0",
+    "serve-static": "^1.10.0"
+  }
+}
