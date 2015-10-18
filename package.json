@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node server.js",
-    "watch": "watchify scripts/index.js -o index.js -dv",
+    "watch": "watchify scripts/index.js -o index.js -v",
     "build-js": "browserify scripts/index.js | uglifyjs -mc > index.js",
     "build-css": "cssmin assets/css/style.css > style.css",
     "build": "npm run build-js && npm run build-css"
@@ -13,7 +13,10 @@
   "browserify": {
     "transform": [
       [
-        "babelify"
+        "babelify",
+        {
+          "optional": "es7"
+        }
       ]
     ]
   },
