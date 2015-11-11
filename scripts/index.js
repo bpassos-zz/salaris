@@ -6,21 +6,43 @@ export default new class Salaris {
     this.bind();
   }
 
-  prepare = () => {
+  prepare() {
     this.elements = {};
     this.elements.form = document.querySelector('[data-component="form"]');
+    this.elements.result = document.querySelector('[data-component="result"]');
     this.elements.errorMessage = document.querySelector('[data-component="error-message"]');
   }
 
-  bind = () => {
+  bind() {
     this.elements.form.addEventListener('submit', ::this.onFormSubmit, true);
   }
 
-  onFormSubmit = (event) => {
+  onFormSubmit(event) {
     event.preventDefault();
-    debugger;
-    console.log('wow', event);
+    let data = this.getData();
+
+    console.log(calculate(data));
   }
+
+  getData() {
+    return {
+      salary: this.getGrossSalary(),
+      hasDiscount: this.isThirtyPercent()
+    }
+  }
+
+  getGrossSalary() {
+    return this.elements.form.querySelector('[data-component-child="gross-salary"]').value;
+  }
+
+  isThirtyPercent() {
+    return this.elements.form.querySelector('[name="thirty_percent"]').checked;
+  }
+
+  renderResult(value) {
+    this.elements.result.innerHTML = value;
+  }
+
 }
 
 // NOTE: refactor into "modules"
@@ -56,7 +78,7 @@ export default new class Salaris {
 // 
 //         // Check if the gross salary field is emputy
 //         
-//         var isThirtyPercent = document.getElementsByName('thirty_percent')[0].checked;
+//         var isThirtyPercent = document.getElementsByName('')[0].checked;
 // 
 //         var currentDomNode;
 // 

@@ -16,11 +16,7 @@
       <form id="dsc-form" action="" class="dsc-form" data-component="form">
         <div class="row">
           <label for="gross_salary">Gross yearly salary</label><br>
-          <input id="gross_salary" type="text" placeholder="What is your gross yearly salary?">
-
-          <!-- This extra hidden field is to prevent page reload on enter-->
-          <input id="hidden_field" type="text" style="display:none;">
-
+          <input id="gross_salary" data-component-child="gross-salary" type="text" placeholder="What is your gross yearly salary?" required>
           <div id="form-validaion-js" class="form-validaion"></div>
         </div>
 
@@ -34,7 +30,7 @@
           </div>
         </div>
         <div class="row">
-          <div id="results"></div>
+          <div id="results" data-component="result"></div>
         </div>
       <button id="submit" class="btn-lg">CALCULATE SALARY</button>
       </form>
