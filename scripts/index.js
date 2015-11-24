@@ -1,4 +1,7 @@
 import calculate from './helpers/calculate';
+import validate from './helpers/validate';
+
+const error = 'We need to known your gross salary. It should be written as "00.00"';
 
 export default new class Salaris {
   constructor() {
@@ -20,6 +23,13 @@ export default new class Salaris {
   onFormSubmit(event) {
     event.preventDefault();
     let data = this.getData();
+    this.renderErrorMessage('');
+
+    if (!validate(data.salary)) {
+      this.renderErrorMessage(error);
+      return;
+    }
+
     let value = this.formatResult(calculate(data));
 
     this.renderResult(value);
@@ -59,6 +69,10 @@ export default new class Salaris {
 
   showResult() {
     this.elements.result.classList.remove('h-is-hidden');
+  }
+
+  renderErrorMessage(value) {
+    this.elements.errorMessage.innerHTML = value;
   }
 
 }
