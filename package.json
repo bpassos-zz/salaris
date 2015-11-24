@@ -4,7 +4,7 @@
   "description": "Dutch salary calculator",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node server.js",
+    "start": "npm run build | npm run watch | node server.js",
     "watch": "watchify scripts/index.js -o index.js -v",
     "build-js": "browserify scripts/index.js | uglifyjs -mc > index.js",
     "build-css": "cssmin assets/css/style.css > style.css",
